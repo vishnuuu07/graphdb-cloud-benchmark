@@ -1,0 +1,10 @@
+{
+  "derived_property_description": "bucket is a deterministic benchmark-only property calculated as id % 32; it supports identical filtered and group-by workloads and does not change graph topology.",
+  "download_timestamp": "2026-08-19T16:39:02.648536+00:00",
+  "node_count": 7115,
+  "random_seed": 20260319,
+  "relationship_count": 103689,
+  "source_checksum": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc",
+  "source_name": "Stanford SNAP wiki-Vote directed graph",
+  "source_url": "https://snap.stanford.edu/data/wiki-Vote.txt.gz"
+}

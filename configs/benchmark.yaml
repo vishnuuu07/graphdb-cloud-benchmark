@@ -1,0 +1,11 @@
+# One fixed seed is used to create fixtures once and replay them on every platform.
+seed: 20260319
+warmup_iterations: 20
+measured_iterations: 100
+benchmark_rounds: 3
+load_batch_size: 1000
+concurrency_levels: [1, 4]
+mixed_read_ratio: 0.8
+mixed_write_ratio: 0.2
+mixed_warmup_seconds: 5
+mixed_measurement_seconds: 30

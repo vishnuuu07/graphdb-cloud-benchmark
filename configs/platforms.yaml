@@ -1,0 +1,16 @@
+platforms:
+  - name: cognodb_cloud
+    adapter: cognodb
+    resource_limits: "Record cloud plan limits and region at run time."
+  - name: neo4j
+    adapter: neo4j
+    resource_limits: "Record deployment size and limits at run time."
+  - name: memgraph
+    adapter: memgraph
+    resource_limits: "Record container or cloud resource limits at run time."
+  - name: falkordb
+    adapter: falkordb
+    resource_limits: "Record container or cloud resource limits at run time."
+  - name: arangodb
+    adapter: arangodb
+    resource_limits: "Record deployment size and limits at run time."
