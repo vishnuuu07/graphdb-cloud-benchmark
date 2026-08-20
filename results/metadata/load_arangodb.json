@@ -1,0 +1,14 @@
+{
+  "batch_size": 1000,
+  "database": "arangodb",
+  "errors": [],
+  "load_method": "parameterized python-arango insert_many batches; schema time excluded",
+  "node_load_seconds": 0.1250387,
+  "nodes_loaded": 7115,
+  "nodes_per_second": 56902.38302221632,
+  "relationship_load_seconds": 2.0299714,
+  "relationships_loaded": 103689,
+  "relationships_per_second": 51079.044758955715,
+  "success": true,
+  "total_load_seconds": 2.1550101
+}

@@ -1,0 +1,20 @@
+{
+  "arangodb_client_version": "8.3.3",
+  "architecture": "AMD64",
+  "benchmark_client_region": "not configured",
+  "benchmark_config_hash": "b0a42c05853667a925e8f15fab6fad36436ed8082b1fe6d896d86c3fa37badc1",
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "cpu_model": "Intel(R) Core(TM) i7-14650HX",
+  "docker_compose_version": "5.4.0",
+  "docker_version": "29.7.2",
+  "falkordb_client_version": "1.7.1",
+  "git_commit": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "logical_cpu_count": 24,
+  "neo4j_driver_version": "5.28.1",
+  "os": "Windows",
+  "os_version": "11",
+  "python_version": "3.14.2",
+  "timestamp": "2026-08-20T01:47:22.777014+05:30",
+  "timezone": "India Standard Time",
+  "total_host_ram_bytes": 16890322944
+}

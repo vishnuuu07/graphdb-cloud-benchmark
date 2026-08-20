@@ -1,0 +1,46 @@
+{
+  "benchmark_client_environment": "metadata/environment.json",
+  "campaign_id": "final-20260820T014836Z",
+  "campaign_status": "aborted_bounded_timeout",
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "dataset_checksum": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc",
+  "fairness_manifest": "metadata/fairness_manifest.json",
+  "fixture_checksum": "2a61a07c52e55d11ef472bffb066b818f831ec216b515c901edb8484e190e1f5",
+  "git_commit_sha": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "platforms": [
+    "cognodb",
+    "neo4j",
+    "memgraph",
+    "falkordb",
+    "arangodb"
+  ],
+  "profile": {
+    "benchmark_client_region": "not configured",
+    "benchmark_rounds": 3,
+    "concurrency_levels": [
+      1,
+      5,
+      10,
+      20,
+      40
+    ],
+    "expected_node_count": 7115,
+    "expected_relationship_count": 103689,
+    "load_batch_size": 1000,
+    "measured_iterations": 200,
+    "mixed_measurement_seconds": 60,
+    "mixed_read_ratio": 0.8,
+    "mixed_warmup_seconds": 15,
+    "mixed_write_ratio": 0.2,
+    "profile": "final",
+    "seed": 20260319,
+    "target_cpu_cores": 0.5,
+    "target_memory_bytes": 268435456,
+    "target_storage_bytes": 1073741824,
+    "warmup_iterations": 30
+  },
+  "run_type": "final",
+  "abort_reason": "CognoDB clean/reset operation exceeded the bounded five-minute diagnostic window before measurement; no final samples were collected.",
+  "started_at": "2026-08-20T01:48:36.069051+05:30",
+  "workload_manifest_hash": "b143786f3c591e5453a48dc3c698738c5452a26b0d6e67816826876f457f4a32"
+}

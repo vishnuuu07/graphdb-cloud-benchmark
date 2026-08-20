@@ -1,0 +1,323 @@
+{
+  "arangodb": [
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:11:54.518991+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:10:39.307249+05:30"
+      },
+      "concurrency": 1
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:13:09.806931+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:11:54.567126+05:30"
+      },
+      "concurrency": 5
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:14:25.135785+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:13:09.856075+05:30"
+      },
+      "concurrency": 10
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:15:40.475108+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:14:25.185658+05:30"
+      },
+      "concurrency": 20
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:16:55.837073+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:15:40.524637+05:30"
+      },
+      "concurrency": 40
+    }
+  ],
+  "falkordb": [
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:20:05.448801+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:18:50.132946+05:30"
+      },
+      "concurrency": 1
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:21:20.978310+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:20:05.498342+05:30"
+      },
+      "concurrency": 5
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:22:36.498132+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:21:21.026292+05:30"
+      },
+      "concurrency": 10
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:23:51.984435+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:22:36.545361+05:30"
+      },
+      "concurrency": 20
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:25:07.527325+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:23:52.034500+05:30"
+      },
+      "concurrency": 40
+    }
+  ],
+  "neo4j": [
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:02:45.939425+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:01:30.441299+05:30"
+      },
+      "concurrency": 1
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:04:01.331483+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:02:45.989569+05:30"
+      },
+      "concurrency": 5
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:05:16.728560+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:04:01.381898+05:30"
+      },
+      "concurrency": 10
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:06:32.139601+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:05:16.780445+05:30"
+      },
+      "concurrency": 20
+    },
+    {
+      "after": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:07:47.738956+05:30"
+      },
+      "before": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T04:06:32.190366+05:30"
+      },
+      "concurrency": 40
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "actual_node_count": 7115,
+  "actual_relationship_count": 103689,
+  "connection_success": true,
+  "database": "cognodb",
+  "expected_node_count": 7115,
+  "expected_relationship_count": 103689,
+  "git_commit": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "indexes": {
+    "User.bucket": "verified",
+    "User.id": "verified"
+  },
+  "load_batch_size": 1000,
+  "load_metrics": {
+    "batch_size": 1000,
+    "database": "cognodb",
+    "errors": [],
+    "load_method": "parameterized UNWIND transactional driver batches; schema time excluded",
+    "node_load_seconds": 2.8536908,
+    "nodes_loaded": 7115,
+    "nodes_per_second": 2493.2624095084166,
+    "relationship_load_seconds": 71.1998661,
+    "relationships_loaded": 103689,
+    "relationships_per_second": 1456.308918536014,
+    "success": true,
+    "total_load_seconds": 74.05355689999999
+  },
+  "load_success": true,
+  "metadata": {
+    "indexed_properties": "bucket,id",
+    "protocol_version": "5.4",
+    "resource_limits": "not observable",
+    "server_agent": "Neo4j/5.26.0"
+  },
+  "resource_configuration": "not observable",
+  "schema_success": true,
+  "tested_workloads": [
+    "point_lookup",
+    "filtered_lookup",
+    "one_hop",
+    "two_hop",
+    "three_hop",
+    "aggregation"
+  ],
+  "timestamp": "2026-08-20T02:28:05.934131+05:30",
+  "tls_verification_success": true,
+  "validation_success": true
+}

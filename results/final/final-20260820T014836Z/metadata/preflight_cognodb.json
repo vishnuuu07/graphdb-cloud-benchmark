@@ -1,0 +1,20 @@
+{
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "connection": true,
+  "counts": {
+    "nodes": 7115,
+    "relationships": 103689
+  },
+  "database": "cognodb",
+  "indexes": "verified by adapter",
+  "profile": "final",
+  "resources": "not required for remote managed service",
+  "validation": [
+    "point_lookup",
+    "filtered_lookup",
+    "one_hop",
+    "two_hop",
+    "three_hop",
+    "aggregation"
+  ]
+}

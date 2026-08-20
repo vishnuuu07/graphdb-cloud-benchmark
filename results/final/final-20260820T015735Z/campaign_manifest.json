@@ -1,0 +1,78 @@
+{
+  "benchmark_client_environment": "metadata/environment.json",
+  "campaign_id": "final-20260820T015735Z",
+  "campaign_status": "incomplete",
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "dataset_checksum": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc",
+  "fairness_manifest": "metadata/fairness_manifest.json",
+  "finished_at": "2026-08-20T02:23:23.532753+05:30",
+  "fixture_checksum": "2a61a07c52e55d11ef472bffb066b818f831ec216b515c901edb8484e190e1f5",
+  "git_commit_sha": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "platform_failures": [
+    {
+      "database": "neo4j",
+      "error_type": "EnvironmentConfigurationError",
+      "message": "NEO4J settings missing: PASSWORD",
+      "timestamp": "2026-08-20T02:22:05.363502+05:30"
+    },
+    {
+      "database": "arangodb",
+      "error_type": "AdapterError",
+      "message": "arangodb connection failed: [HTTP 401][ERR 11] not authorized to execute this request",
+      "timestamp": "2026-08-20T02:23:18.752705+05:30"
+    }
+  ],
+  "platforms": [
+    "cognodb",
+    "neo4j",
+    "memgraph",
+    "falkordb",
+    "arangodb"
+  ],
+  "profile": {
+    "benchmark_client_region": "not configured",
+    "benchmark_rounds": 3,
+    "concurrency_levels": [
+      1,
+      5,
+      10,
+      20,
+      40
+    ],
+    "expected_node_count": 7115,
+    "expected_relationship_count": 103689,
+    "load_batch_size": 1000,
+    "measured_iterations": 200,
+    "mixed_measurement_seconds": 60,
+    "mixed_read_ratio": 0.8,
+    "mixed_warmup_seconds": 15,
+    "mixed_write_ratio": 0.2,
+    "profile": "final",
+    "seed": 20260319,
+    "target_cpu_cores": 0.5,
+    "target_memory_bytes": 268435456,
+    "target_storage_bytes": 1073741824,
+    "warmup_iterations": 30
+  },
+  "result_completeness": {
+    "problems": [
+      "arangodb/aggregation: expected 200 attempts in each round",
+      "arangodb/filtered_lookup: expected 200 attempts in each round",
+      "arangodb/one_hop: expected 200 attempts in each round",
+      "arangodb/point_lookup: expected 200 attempts in each round",
+      "arangodb/three_hop: expected 200 attempts in each round",
+      "arangodb/two_hop: expected 200 attempts in each round",
+      "neo4j/aggregation: expected 200 attempts in each round",
+      "neo4j/filtered_lookup: expected 200 attempts in each round",
+      "neo4j/one_hop: expected 200 attempts in each round",
+      "neo4j/point_lookup: expected 200 attempts in each round",
+      "neo4j/three_hop: expected 200 attempts in each round",
+      "neo4j/two_hop: expected 200 attempts in each round"
+    ],
+    "raw_rows": 11340,
+    "valid": false
+  },
+  "run_type": "final",
+  "started_at": "2026-08-20T01:57:35.361348+05:30",
+  "workload_manifest_hash": "b143786f3c591e5453a48dc3c698738c5452a26b0d6e67816826876f457f4a32"
+}

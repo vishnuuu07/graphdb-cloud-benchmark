@@ -1,0 +1,14 @@
+{
+  "batch_size": 1000,
+  "database": "cognodb",
+  "errors": [],
+  "load_method": "parameterized UNWIND transactional driver batches; schema time excluded",
+  "node_load_seconds": 2.8536908,
+  "nodes_loaded": 7115,
+  "nodes_per_second": 2493.2624095084166,
+  "relationship_load_seconds": 71.1998661,
+  "relationships_loaded": 103689,
+  "relationships_per_second": 1456.308918536014,
+  "success": true,
+  "total_load_seconds": 74.05355689999999
+}

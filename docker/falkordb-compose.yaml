@@ -1,0 +1,26 @@
+services:
+  falkordb:
+    image: falkordb/falkordb:v4.20.1
+    container_name: graphbench-falkordb
+    restart: "no"
+    environment:
+      # The official entrypoint consumes these variables; command arguments are ignored.
+      FALKORDB_DATA_PATH: /data
+      # RDB snapshots persist to the mounted path; AOF replay did not become usable at
+      # the 256 MiB target on this Docker Desktop host.
+      FALKORDB_ARGS: ""
+      BROWSER: "0"
+    ports:
+      - "127.0.0.1:6379:6379"
+    cpus: 0.5
+    mem_limit: 256m
+    volumes:
+      - falkordb-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep -q PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  falkordb-data:

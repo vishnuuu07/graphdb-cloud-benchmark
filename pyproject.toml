@@ -7,10 +7,16 @@ name = "graphbench"
 version = "0.1.0"
 description = "Reproducible graph database benchmark harness"
 requires-python = ">=3.11"
-dependencies = ["PyYAML==6.0.2"]
+dependencies = [
+    "certifi==2026.1.4",
+    "falkordb==1.7.1",
+    "neo4j==5.28.1",
+    "python-arango==8.3.3",
+    "PyYAML==6.0.2",
+]
 
 [project.optional-dependencies]
-dev = ["pytest==8.3.5", "ruff==0.9.10"]
+dev = ["matplotlib==3.10.6", "pytest==8.3.5", "ruff==0.9.10"]
 
 [project.scripts]
 graphbench = "graphbench.cli:main"

@@ -1,0 +1,1258 @@
+{
+  "audit_timestamp": "2026-08-20T06:53:55.122727+05:30",
+  "audit_version": 1,
+  "campaign": {
+    "campaign_id": "final-20260820T022802Z",
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "dataset_checksum": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc",
+    "fixture_checksum": "2a61a07c52e55d11ef472bffb066b818f831ec216b515c901edb8484e190e1f5"
+  },
+  "claim_safety": {
+    "comparable_with_caveat": [
+      "Neo4j measurements due to 384 MiB RAM",
+      "ingest due to different client protocols"
+    ],
+    "end_to_end": [
+      "CognoDB latency due to WAN/TLS"
+    ],
+    "strict_or_close": [
+      "same canonical graph counts",
+      "fixture identity",
+      "logical query validation",
+      "local CPU caps except Neo4j memory"
+    ]
+  },
+  "critical_issues": [],
+  "identity": {
+    "errors": [],
+    "status": "PASS"
+  },
+  "index_equivalence": {
+    "evidence": "Preflight artifacts record equivalent id and bucket indexes; adapter code creates no additional benchmark-specific performance indexes.",
+    "status": "PASS"
+  },
+  "ingest": {
+    "errors": [],
+    "load_methods": {
+      "arangodb": "parameterized python-arango insert_many batches; schema time excluded",
+      "cognodb": "parameterized UNWIND transactional driver batches; schema time excluded",
+      "falkordb": "parameterized FalkorDB Cypher transactional batches; schema time excluded",
+      "memgraph": "parameterized UNWIND transactional driver batches; schema time excluded",
+      "neo4j": "parameterized UNWIND transactional driver batches; schema time excluded"
+    },
+    "status": "PASS",
+    "timing_scope": "Node and relationship driver/client batch load only; schema setup is excluded. Dataset download, preprocessing, and container startup are excluded."
+  },
+  "local_isolation": {
+    "evidence": "Final orchestration calls _stop_local_databases before the campaign and starts/stops one local database around each platform. Historic runtime process telemetry is not available.",
+    "status": "PASS"
+  },
+  "mixed": {
+    "completeness": {
+      "actual_levels": 25,
+      "expected_levels": 25,
+      "valid": true
+    },
+    "concurrency_evidence": {
+      "arangodb": {
+        "1": {
+          "raw_distinct_worker_count": 1,
+          "raw_worker_ids": [
+            0
+          ],
+          "summary_max_observed_in_flight": 1,
+          "valid": true
+        },
+        "10": {
+          "raw_distinct_worker_count": 10,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "summary_max_observed_in_flight": 10,
+          "valid": true
+        },
+        "20": {
+          "raw_distinct_worker_count": 20,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "summary_max_observed_in_flight": 20,
+          "valid": true
+        },
+        "40": {
+          "raw_distinct_worker_count": 40,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "summary_max_observed_in_flight": 40,
+          "valid": true
+        },
+        "5": {
+          "raw_distinct_worker_count": 5,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "summary_max_observed_in_flight": 5,
+          "valid": true
+        }
+      },
+      "cognodb": {
+        "1": {
+          "raw_distinct_worker_count": 1,
+          "raw_worker_ids": [
+            0
+          ],
+          "summary_max_observed_in_flight": 1,
+          "valid": true
+        },
+        "10": {
+          "raw_distinct_worker_count": 10,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "summary_max_observed_in_flight": 10,
+          "valid": true
+        },
+        "20": {
+          "raw_distinct_worker_count": 20,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "summary_max_observed_in_flight": 20,
+          "valid": true
+        },
+        "40": {
+          "raw_distinct_worker_count": 40,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "summary_max_observed_in_flight": 40,
+          "valid": true
+        },
+        "5": {
+          "raw_distinct_worker_count": 5,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "summary_max_observed_in_flight": 5,
+          "valid": true
+        }
+      },
+      "falkordb": {
+        "1": {
+          "raw_distinct_worker_count": 1,
+          "raw_worker_ids": [
+            0
+          ],
+          "summary_max_observed_in_flight": 1,
+          "valid": true
+        },
+        "10": {
+          "raw_distinct_worker_count": 10,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "summary_max_observed_in_flight": 10,
+          "valid": true
+        },
+        "20": {
+          "raw_distinct_worker_count": 20,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "summary_max_observed_in_flight": 20,
+          "valid": true
+        },
+        "40": {
+          "raw_distinct_worker_count": 40,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "summary_max_observed_in_flight": 40,
+          "valid": true
+        },
+        "5": {
+          "raw_distinct_worker_count": 5,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "summary_max_observed_in_flight": 5,
+          "valid": true
+        }
+      },
+      "memgraph": {
+        "1": {
+          "raw_distinct_worker_count": 1,
+          "raw_worker_ids": [
+            0
+          ],
+          "summary_max_observed_in_flight": 1,
+          "valid": true
+        },
+        "10": {
+          "raw_distinct_worker_count": 10,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "summary_max_observed_in_flight": 10,
+          "valid": true
+        },
+        "20": {
+          "raw_distinct_worker_count": 20,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "summary_max_observed_in_flight": 20,
+          "valid": true
+        },
+        "40": {
+          "raw_distinct_worker_count": 40,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "summary_max_observed_in_flight": 40,
+          "valid": true
+        },
+        "5": {
+          "raw_distinct_worker_count": 5,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "summary_max_observed_in_flight": 5,
+          "valid": true
+        }
+      },
+      "neo4j": {
+        "1": {
+          "raw_distinct_worker_count": 1,
+          "raw_worker_ids": [
+            0
+          ],
+          "summary_max_observed_in_flight": 1,
+          "valid": true
+        },
+        "10": {
+          "raw_distinct_worker_count": 10,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "summary_max_observed_in_flight": 10,
+          "valid": true
+        },
+        "20": {
+          "raw_distinct_worker_count": 20,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "summary_max_observed_in_flight": 20,
+          "valid": true
+        },
+        "40": {
+          "raw_distinct_worker_count": 40,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          "summary_max_observed_in_flight": 40,
+          "valid": true
+        },
+        "5": {
+          "raw_distinct_worker_count": 5,
+          "raw_worker_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "summary_max_observed_in_flight": 5,
+          "valid": true
+        }
+      }
+    },
+    "distribution": {
+      "arangodb": {
+        "1": {
+          "read_operations": 32066,
+          "read_percentage": 80.00099795419389,
+          "valid": true,
+          "write_operations": 8016,
+          "write_percentage": 19.999002045806098
+        },
+        "10": {
+          "read_operations": 56104,
+          "read_percentage": 80.0,
+          "valid": true,
+          "write_operations": 14026,
+          "write_percentage": 20.0
+        },
+        "20": {
+          "read_operations": 57012,
+          "read_percentage": 80.0,
+          "valid": true,
+          "write_operations": 14253,
+          "write_percentage": 20.0
+        },
+        "40": {
+          "read_operations": 58596,
+          "read_percentage": 80.00109223963737,
+          "valid": true,
+          "write_operations": 14648,
+          "write_percentage": 19.998907760362624
+        },
+        "5": {
+          "read_operations": 56079,
+          "read_percentage": 80.0008559445348,
+          "valid": true,
+          "write_operations": 14019,
+          "write_percentage": 19.999144055465205
+        }
+      },
+      "cognodb": {
+        "1": {
+          "read_operations": 181,
+          "read_percentage": 80.08849557522124,
+          "valid": true,
+          "write_operations": 45,
+          "write_percentage": 19.911504424778762
+        },
+        "10": {
+          "read_operations": 1883,
+          "read_percentage": 80.02549936251594,
+          "valid": true,
+          "write_operations": 470,
+          "write_percentage": 19.974500637484063
+        },
+        "20": {
+          "read_operations": 3767,
+          "read_percentage": 80.01274426508071,
+          "valid": true,
+          "write_operations": 941,
+          "write_percentage": 19.987255734919287
+        },
+        "40": {
+          "read_operations": 7513,
+          "read_percentage": 80.00212969864764,
+          "valid": true,
+          "write_operations": 1878,
+          "write_percentage": 19.997870301352357
+        },
+        "5": {
+          "read_operations": 946,
+          "read_percentage": 80.03384094754654,
+          "valid": true,
+          "write_operations": 236,
+          "write_percentage": 19.96615905245347
+        }
+      },
+      "falkordb": {
+        "1": {
+          "read_operations": 76232,
+          "read_percentage": 80.00083955125984,
+          "valid": true,
+          "write_operations": 19057,
+          "write_percentage": 19.99916044874015
+        },
+        "10": {
+          "read_operations": 130564,
+          "read_percentage": 80.00049018406412,
+          "valid": true,
+          "write_operations": 32640,
+          "write_percentage": 19.999509815935884
+        },
+        "20": {
+          "read_operations": 123948,
+          "read_percentage": 80.00051634889695,
+          "valid": true,
+          "write_operations": 30986,
+          "write_percentage": 19.999483651103052
+        },
+        "40": {
+          "read_operations": 117226,
+          "read_percentage": 80.00027297791608,
+          "valid": true,
+          "write_operations": 29306,
+          "write_percentage": 19.999727022083913
+        },
+        "5": {
+          "read_operations": 143477,
+          "read_percentage": 80.00011151628695,
+          "valid": true,
+          "write_operations": 35869,
+          "write_percentage": 19.999888483713047
+        }
+      },
+      "memgraph": {
+        "1": {
+          "read_operations": 31451,
+          "read_percentage": 80.00152621270318,
+          "valid": true,
+          "write_operations": 7862,
+          "write_percentage": 19.998473787296824
+        },
+        "10": {
+          "read_operations": 48922,
+          "read_percentage": 80.00065410779696,
+          "valid": true,
+          "write_operations": 12230,
+          "write_percentage": 19.999345892203035
+        },
+        "20": {
+          "read_operations": 41292,
+          "read_percentage": 80.0015499670632,
+          "valid": true,
+          "write_operations": 10322,
+          "write_percentage": 19.998450032936802
+        },
+        "40": {
+          "read_operations": 36963,
+          "read_percentage": 80.00129861697293,
+          "valid": true,
+          "write_operations": 9240,
+          "write_percentage": 19.998701383027075
+        },
+        "5": {
+          "read_operations": 54200,
+          "read_percentage": 80.0,
+          "valid": true,
+          "write_operations": 13550,
+          "write_percentage": 20.0
+        }
+      },
+      "neo4j": {
+        "1": {
+          "read_operations": 19084,
+          "read_percentage": 80.0,
+          "valid": true,
+          "write_operations": 4771,
+          "write_percentage": 20.0
+        },
+        "10": {
+          "read_operations": 43081,
+          "read_percentage": 80.00037139514586,
+          "valid": true,
+          "write_operations": 10770,
+          "write_percentage": 19.999628604854134
+        },
+        "20": {
+          "read_operations": 39382,
+          "read_percentage": 80.00081256221179,
+          "valid": true,
+          "write_operations": 9845,
+          "write_percentage": 19.999187437788205
+        },
+        "40": {
+          "read_operations": 24678,
+          "read_percentage": 80.0012967225338,
+          "valid": true,
+          "write_operations": 6169,
+          "write_percentage": 19.998703277466205
+        },
+        "5": {
+          "read_operations": 43068,
+          "read_percentage": 80.0,
+          "valid": true,
+          "write_operations": 10767,
+          "write_percentage": 20.0
+        }
+      }
+    },
+    "failures": [
+      {
+        "classification": "transaction conflict",
+        "concurrency": 40,
+        "database": "memgraph",
+        "error_type": "AdapterError",
+        "operation_category": "write",
+        "workload": "mixed_write"
+      },
+      {
+        "classification": "transaction conflict",
+        "concurrency": 40,
+        "database": "memgraph",
+        "error_type": "AdapterError",
+        "operation_category": "write",
+        "workload": "mixed_write"
+      },
+      {
+        "classification": "transaction memory-pool OOM",
+        "concurrency": 40,
+        "database": "neo4j",
+        "error_type": "AdapterError",
+        "operation_category": "write",
+        "workload": "mixed_write"
+      }
+    ],
+    "measured_operations": 1559631,
+    "operation_summary_reconciliation": {
+      "expected_rows": 50,
+      "mismatches": [],
+      "status": "PASS",
+      "stored_rows": 50,
+      "unexpected_summary_keys": []
+    },
+    "qps_arithmetic_errors": [],
+    "status": "PASS",
+    "summary_reconciliation": {
+      "expected_rows": 25,
+      "mismatches": [],
+      "status": "PASS",
+      "stored_rows": 25,
+      "unexpected_summary_keys": []
+    }
+  },
+  "network_topology": {
+    "evidence": "Transport baseline is diagnostic-only and marked not_subtracted_from_query_latency; final samples are raw client-observed values.",
+    "status": "PASS WITH CAVEAT"
+  },
+  "publication_status": "PASSED \u2014 RESULTS FROZEN",
+  "query_equivalence": {
+    "evidence": "docs/QUERY_EQUIVALENCE.md and adapter implementations reviewed; canonical oracle validation is recorded in final preflight and post-workload artifacts.",
+    "status": "PASS"
+  },
+  "read": {
+    "counts": {
+      "measured_failures": 0,
+      "measured_rows": 18000,
+      "raw_rows": 18900,
+      "warmup_expected": 900,
+      "warmup_rows": 900
+    },
+    "materially_unstable_round_medians": {
+      "memgraph/two_hop": 0.10222121968118811,
+      "neo4j/one_hop": 0.19906997920924027
+    },
+    "round_median_cv": {
+      "arangodb/aggregation": 0.0015766007105739908,
+      "arangodb/filtered_lookup": 0.004858804077998344,
+      "arangodb/one_hop": 0.006968579383957057,
+      "arangodb/point_lookup": 0.0020789935850650605,
+      "arangodb/three_hop": 0.02028429618836118,
+      "arangodb/two_hop": 0.01305334480563522,
+      "cognodb/aggregation": 0.002288477910436156,
+      "cognodb/filtered_lookup": 0.0006285200615904618,
+      "cognodb/one_hop": 0.01563530922267915,
+      "cognodb/point_lookup": 0.0006194465176416717,
+      "cognodb/three_hop": 0.010462982678305494,
+      "cognodb/two_hop": 0.0015637823146110103,
+      "falkordb/aggregation": 0.003255791091880055,
+      "falkordb/filtered_lookup": 0.02528626024990183,
+      "falkordb/one_hop": 0.017577236999906858,
+      "falkordb/point_lookup": 0.037823886844452426,
+      "falkordb/three_hop": 0.02202591228595006,
+      "falkordb/two_hop": 0.01249364310316116,
+      "memgraph/aggregation": 0.010081730089367955,
+      "memgraph/filtered_lookup": 0.05087034128496892,
+      "memgraph/one_hop": 0.04021400673155025,
+      "memgraph/point_lookup": 0.024043480312992315,
+      "memgraph/three_hop": 0.03839835527417278,
+      "memgraph/two_hop": 0.10222121968118811,
+      "neo4j/aggregation": 0.04254927394563895,
+      "neo4j/filtered_lookup": 0.03889709691259322,
+      "neo4j/one_hop": 0.19906997920924027,
+      "neo4j/point_lookup": 0.03152119928089477,
+      "neo4j/three_hop": 0.07915512620012367,
+      "neo4j/two_hop": 0.08780275707281886
+    },
+    "round_summary_reconciliation": {
+      "expected_rows": 90,
+      "mismatches": [],
+      "status": "PASS",
+      "stored_rows": 90,
+      "unexpected_summary_keys": []
+    },
+    "sample_count_problems": [],
+    "status": "PASS",
+    "summary_reconciliation": {
+      "expected_rows": 30,
+      "mismatches": [],
+      "status": "PASS",
+      "stored_rows": 30,
+      "unexpected_summary_keys": []
+    }
+  },
+  "resources": {
+    "platforms": {
+      "arangodb": {
+        "observed_cpu_cores": 0.5,
+        "observed_memory_bytes": 268435456,
+        "resource_parity": "strict compute parity",
+        "status": "PASS"
+      },
+      "cognodb": {
+        "evidence": "Assignment-advertised 0.5 burstable vCPU, 256 MiB RAM, and 1 GiB storage; runtime use is not observable.",
+        "status": "PASS WITH CAVEAT"
+      },
+      "falkordb": {
+        "observed_cpu_cores": 0.5,
+        "observed_memory_bytes": 268435456,
+        "resource_parity": "strict compute parity",
+        "status": "PASS"
+      },
+      "memgraph": {
+        "observed_cpu_cores": 0.5,
+        "observed_memory_bytes": 268435456,
+        "resource_parity": "strict compute parity",
+        "status": "PASS"
+      },
+      "neo4j": {
+        "observed_cpu_cores": 0.5,
+        "observed_memory_bytes": 402653184,
+        "resource_parity": "DEVIATION",
+        "status": "PASS"
+      }
+    },
+    "status": "PASS"
+  },
+  "result_payload": {
+    "evidence": "Timed lookups/traversals return scalar counts; aggregation returns the complete bounded bucket map. No adapter transfers traversal rows.",
+    "status": "PASS"
+  },
+  "security_scan": {
+    "findings": [],
+    "status": "PASS"
+  },
+  "tail_latency": {
+    "arangodb": {
+      "conclusion": "Raw samples exist across all three rounds and are concentrated on high-path-count fixtures.",
+      "highest_latency_fixture_evidence": [
+        {
+          "fixture_id": "457",
+          "max_ms": 589.8654,
+          "mean_ms": 535.7070166666666,
+          "sample_count": 6,
+          "three_hop_path_count": 1211397
+        },
+        {
+          "fixture_id": "5189",
+          "max_ms": 200.6646,
+          "mean_ms": 186.86788333333334,
+          "sample_count": 6,
+          "three_hop_path_count": 417990
+        },
+        {
+          "fixture_id": "5543",
+          "max_ms": 135.0303,
+          "mean_ms": 106.63716666666666,
+          "sample_count": 6,
+          "three_hop_path_count": 293585
+        },
+        {
+          "fixture_id": "5817",
+          "max_ms": 77.5029,
+          "mean_ms": 56.82781666666667,
+          "sample_count": 6,
+          "three_hop_path_count": 168753
+        },
+        {
+          "fixture_id": "6620",
+          "max_ms": 68.6433,
+          "mean_ms": 53.87606666666667,
+          "sample_count": 6,
+          "three_hop_path_count": 183814
+        },
+        {
+          "fixture_id": "4297",
+          "max_ms": 68.3176,
+          "mean_ms": 34.99803333333333,
+          "sample_count": 6,
+          "three_hop_path_count": 66577
+        },
+        {
+          "fixture_id": "5812",
+          "max_ms": 65.9725,
+          "mean_ms": 34.93586666666666,
+          "sample_count": 6,
+          "three_hop_path_count": 86909
+        },
+        {
+          "fixture_id": "7086",
+          "max_ms": 56.0035,
+          "mean_ms": 27.96898333333333,
+          "sample_count": 6,
+          "three_hop_path_count": 91007
+        }
+      ],
+      "maximum_ms": 589.8654,
+      "p50_ms": 2.7423,
+      "p95_ms": 53.22260499999996,
+      "round_p95_ms": {
+        "1": 56.11610500000008,
+        "2": 41.26543000000015,
+        "3": 46.271255000000004
+      },
+      "sample_count": 600
+    },
+    "cognodb": {
+      "conclusion": "Raw samples exist across all three rounds and are concentrated on high-path-count fixtures.",
+      "highest_latency_fixture_evidence": [
+        {
+          "fixture_id": "457",
+          "max_ms": 9092.6905,
+          "mean_ms": 8963.234900000001,
+          "sample_count": 6,
+          "three_hop_path_count": 1211397
+        },
+        {
+          "fixture_id": "5189",
+          "max_ms": 3273.2478,
+          "mean_ms": 3166.2933666666668,
+          "sample_count": 6,
+          "three_hop_path_count": 417990
+        },
+        {
+          "fixture_id": "5543",
+          "max_ms": 2638.5893,
+          "mean_ms": 2406.8530166666665,
+          "sample_count": 6,
+          "three_hop_path_count": 293585
+        },
+        {
+          "fixture_id": "6620",
+          "max_ms": 1606.8387,
+          "mean_ms": 1555.3562000000002,
+          "sample_count": 6,
+          "three_hop_path_count": 183814
+        },
+        {
+          "fixture_id": "5817",
+          "max_ms": 1469.9266,
+          "mean_ms": 1380.6201166666667,
+          "sample_count": 6,
+          "three_hop_path_count": 168753
+        },
+        {
+          "fixture_id": "5655",
+          "max_ms": 1195.2628,
+          "mean_ms": 1147.4856333333335,
+          "sample_count": 6,
+          "three_hop_path_count": 134919
+        },
+        {
+          "fixture_id": "7086",
+          "max_ms": 995.2646,
+          "mean_ms": 877.1091666666666,
+          "sample_count": 6,
+          "three_hop_path_count": 91007
+        },
+        {
+          "fixture_id": "5812",
+          "max_ms": 871.8517,
+          "mean_ms": 831.31795,
+          "sample_count": 6,
+          "three_hop_path_count": 86909
+        }
+      ],
+      "maximum_ms": 9092.6905,
+      "p50_ms": 266.64115,
+      "p95_ms": 1200.2600549999954,
+      "round_p95_ms": {
+        "1": 1200.260055000001,
+        "2": 1151.6549150000026,
+        "3": 1194.7313100000024
+      },
+      "sample_count": 600
+    },
+    "falkordb": {
+      "conclusion": "Raw samples exist across all three rounds and are concentrated on high-path-count fixtures.",
+      "highest_latency_fixture_evidence": [
+        {
+          "fixture_id": "457",
+          "max_ms": 753.5013,
+          "mean_ms": 723.5998,
+          "sample_count": 6,
+          "three_hop_path_count": 1211397
+        },
+        {
+          "fixture_id": "5189",
+          "max_ms": 263.8331,
+          "mean_ms": 224.28509999999997,
+          "sample_count": 6,
+          "three_hop_path_count": 417990
+        },
+        {
+          "fixture_id": "5543",
+          "max_ms": 185.4437,
+          "mean_ms": 155.12735,
+          "sample_count": 6,
+          "three_hop_path_count": 293585
+        },
+        {
+          "fixture_id": "6620",
+          "max_ms": 100.5034,
+          "mean_ms": 87.00076666666666,
+          "sample_count": 6,
+          "three_hop_path_count": 183814
+        },
+        {
+          "fixture_id": "5817",
+          "max_ms": 86.5762,
+          "mean_ms": 74.4584,
+          "sample_count": 6,
+          "three_hop_path_count": 168753
+        },
+        {
+          "fixture_id": "5655",
+          "max_ms": 83.2586,
+          "mean_ms": 70.09835,
+          "sample_count": 6,
+          "three_hop_path_count": 134919
+        },
+        {
+          "fixture_id": "5812",
+          "max_ms": 62.6788,
+          "mean_ms": 43.01271666666667,
+          "sample_count": 6,
+          "three_hop_path_count": 86909
+        },
+        {
+          "fixture_id": "2516",
+          "max_ms": 53.0609,
+          "mean_ms": 31.55118333333333,
+          "sample_count": 6,
+          "three_hop_path_count": 69390
+        }
+      ],
+      "maximum_ms": 753.5013,
+      "p50_ms": 2.06255,
+      "p95_ms": 67.19485499999992,
+      "round_p95_ms": {
+        "1": 59.800705,
+        "2": 72.45966500000013,
+        "3": 67.66746500000013
+      },
+      "sample_count": 600
+    },
+    "neo4j": {
+      "conclusion": "Raw samples exist across all three rounds and are concentrated on high-path-count fixtures.",
+      "highest_latency_fixture_evidence": [
+        {
+          "fixture_id": "457",
+          "max_ms": 2085.2776,
+          "mean_ms": 1577.7953833333333,
+          "sample_count": 6,
+          "three_hop_path_count": 1211397
+        },
+        {
+          "fixture_id": "5189",
+          "max_ms": 785.2188,
+          "mean_ms": 610.021,
+          "sample_count": 6,
+          "three_hop_path_count": 417990
+        },
+        {
+          "fixture_id": "5543",
+          "max_ms": 595.294,
+          "mean_ms": 463.8025666666667,
+          "sample_count": 6,
+          "three_hop_path_count": 293585
+        },
+        {
+          "fixture_id": "6620",
+          "max_ms": 583.6101,
+          "mean_ms": 306.81908333333337,
+          "sample_count": 6,
+          "three_hop_path_count": 183814
+        },
+        {
+          "fixture_id": "1214",
+          "max_ms": 398.3717,
+          "mean_ms": 69.93473333333333,
+          "sample_count": 6,
+          "three_hop_path_count": 10693
+        },
+        {
+          "fixture_id": "5817",
+          "max_ms": 376.2762,
+          "mean_ms": 269.07946666666663,
+          "sample_count": 6,
+          "three_hop_path_count": 168753
+        },
+        {
+          "fixture_id": "5419",
+          "max_ms": 324.3057,
+          "mean_ms": 79.20076666666667,
+          "sample_count": 6,
+          "three_hop_path_count": 8792
+        },
+        {
+          "fixture_id": "5655",
+          "max_ms": 282.1771,
+          "mean_ms": 191.0266333333333,
+          "sample_count": 6,
+          "three_hop_path_count": 134919
+        }
+      ],
+      "maximum_ms": 2085.2776,
+      "p50_ms": 2.7759,
+      "p95_ms": 274.629295,
+      "round_p95_ms": {
+        "1": 241.73272000000046,
+        "2": 201.30345000000088,
+        "3": 275.44378500000016
+      },
+      "sample_count": 600
+    }
+  },
+  "timing_boundary": {
+    "evidence": "timed_operation surrounds an already-connected adapter call and result consumption; fixture selection and raw writing occur outside the timer.",
+    "status": "PASS"
+  },
+  "warnings": [
+    "CognoDB is a managed remote TLS/Bolt service; raw latency is end-to-end WAN/TLS client-observed latency, not engine-isolated latency.",
+    "Neo4j was measured at 0.5 CPU and 384 MiB RAM. This is a documented resource-parity deviation from the 256 MiB target.",
+    "Docker Desktop volume quotas were unavailable; observed storage footprint is not an enforced 1 GiB allocation.",
+    "The benchmark client and local Docker databases share a Windows host; background activity, Docker Desktop/WSL, and scheduling may contribute noise.",
+    "FalkorDB required a recorded preflight schema/data repair before mixed measurement and a recorded post-workload repair after an initial filtered-lookup validation failure. Its immediately preceding preflight and final post-repair canonical validations pass; the repair history must remain disclosed."
+  ]
+}

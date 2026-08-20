@@ -1,0 +1,20 @@
+{
+  "batch_size": 1000,
+  "campaign_id": "final-20260820T014836Z",
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "database": "cognodb",
+  "errors": [],
+  "load_method": "parameterized UNWIND transactional driver batches; schema time excluded",
+  "node_batch_size": 1000,
+  "node_load_seconds": 3.3341196,
+  "nodes_loaded": 7115,
+  "nodes_per_second": 2133.9966328742375,
+  "relationship_batch_size": 1000,
+  "relationship_load_seconds": 90.3991496,
+  "relationships_loaded": 103689,
+  "relationships_per_second": 1147.0130024320495,
+  "schema_setup_excluded": true,
+  "schema_setup_seconds": null,
+  "success": true,
+  "total_load_seconds": 93.7332692
+}

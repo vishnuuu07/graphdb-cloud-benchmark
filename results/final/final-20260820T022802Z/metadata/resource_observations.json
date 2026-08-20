@@ -1,0 +1,144 @@
+{
+  "arangodb": {
+    "campaign_id": "final-20260820T022802Z",
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "post_load_metadata": {
+      "indexed_properties": "bucket,id",
+      "resource_limits": "see Docker inspect evidence",
+      "server_version": "3.12.9-4"
+    },
+    "preflight": {
+      "expected_cpu_cores": 0.5,
+      "expected_memory_bytes": 268435456,
+      "observed": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "arangodb",
+        "image": "arangodb:3.12.9.4",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T03:15:02.913762+05:30"
+      },
+      "resource_parity_status": "strict compute parity"
+    },
+    "resource_configuration": {
+      "container_status": "running",
+      "cpu_percent": 0.5,
+      "database": "arangodb",
+      "image": "arangodb:3.12.9.4",
+      "memory_bytes": 268435456,
+      "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+      "observed_at": "2026-08-20T03:15:00.697231+05:30"
+    }
+  },
+  "cognodb": {
+    "campaign_id": "final-20260820T022802Z",
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "post_load_metadata": {
+      "indexed_properties": "bucket,id",
+      "protocol_version": "5.4",
+      "resource_limits": "not observable",
+      "server_agent": "Neo4j/5.26.0"
+    },
+    "preflight": "not required for remote managed service",
+    "resource_configuration": "not observable"
+  },
+  "falkordb": {
+    "campaign_id": "final-20260820T022802Z",
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "post_load_metadata": {
+      "indexed_properties": "bucket,id",
+      "resource_limits": "see Docker inspect evidence",
+      "server": "FalkorDB via supported Python client"
+    },
+    "preflight": {
+      "expected_cpu_cores": 0.5,
+      "expected_memory_bytes": 268435456,
+      "observed": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "falkordb",
+        "image": "falkordb/falkordb:v4.20.1",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T02:53:30.993554+05:30"
+      },
+      "resource_parity_status": "strict compute parity"
+    },
+    "resource_configuration": {
+      "container_status": "running",
+      "cpu_percent": 0.5,
+      "database": "falkordb",
+      "image": "falkordb/falkordb:v4.20.1",
+      "memory_bytes": 268435456,
+      "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+      "observed_at": "2026-08-20T02:53:28.613613+05:30"
+    }
+  },
+  "memgraph": {
+    "campaign_id": "final-20260820T022802Z",
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "post_load_metadata": {
+      "indexed_properties": "bucket,id",
+      "protocol_version": "5.2",
+      "resource_limits": "not observable",
+      "server_agent": "Neo4j/v5.11.0 compatible graph database server - Memgraph"
+    },
+    "preflight": {
+      "expected_cpu_cores": 0.5,
+      "expected_memory_bytes": 268435456,
+      "observed": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "memgraph",
+        "image": "memgraph/memgraph:3.12.0",
+        "memory_bytes": 268435456,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T02:52:55.629471+05:30"
+      },
+      "resource_parity_status": "strict compute parity"
+    },
+    "resource_configuration": {
+      "container_status": "running",
+      "cpu_percent": 0.5,
+      "database": "memgraph",
+      "image": "memgraph/memgraph:3.12.0",
+      "memory_bytes": 268435456,
+      "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+      "observed_at": "2026-08-20T02:52:53.210826+05:30"
+    }
+  },
+  "neo4j": {
+    "campaign_id": "final-20260820T022802Z",
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "post_load_metadata": {
+      "indexed_properties": "bucket,id",
+      "protocol_version": "5.8",
+      "resource_limits": "not observable",
+      "server_agent": "Neo4j/5.26.5"
+    },
+    "preflight": {
+      "expected_cpu_cores": 0.5,
+      "expected_memory_bytes": 402653184,
+      "observed": {
+        "container_status": "running",
+        "cpu_percent": 0.5,
+        "database": "neo4j",
+        "image": "neo4j:5.26.5-community",
+        "memory_bytes": 402653184,
+        "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+        "observed_at": "2026-08-20T03:09:25.826785+05:30"
+      },
+      "resource_parity_status": "deviation"
+    },
+    "resource_configuration": {
+      "container_status": "running",
+      "cpu_percent": 0.5,
+      "database": "neo4j",
+      "image": "neo4j:5.26.5-community",
+      "memory_bytes": 402653184,
+      "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+      "observed_at": "2026-08-20T03:09:23.327202+05:30"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "connection": true,
+  "counts": {
+    "nodes": 7115,
+    "relationships": 103689
+  },
+  "database": "neo4j",
+  "indexes": "verified by adapter",
+  "profile": "final",
+  "resources": {
+    "expected_cpu_cores": 0.5,
+    "expected_memory_bytes": 402653184,
+    "observed": {
+      "container_status": "running",
+      "cpu_percent": 0.5,
+      "database": "neo4j",
+      "image": "neo4j:5.26.5-community",
+      "memory_bytes": 402653184,
+      "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+      "observed_at": "2026-08-20T04:01:12.174553+05:30"
+    },
+    "resource_parity_status": "deviation"
+  },
+  "validation": [
+    "point_lookup",
+    "filtered_lookup",
+    "one_hop",
+    "two_hop",
+    "three_hop",
+    "aggregation"
+  ]
+}

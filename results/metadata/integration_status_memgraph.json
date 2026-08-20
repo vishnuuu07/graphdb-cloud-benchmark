@@ -1,0 +1,60 @@
+{
+  "actual_node_count": 7115,
+  "actual_relationship_count": 103689,
+  "configured_cpu_limit": 0.5,
+  "configured_memory_limit": 268435456,
+  "connection_success": true,
+  "container_image": "memgraph/memgraph:3.12.0",
+  "container_status": "running",
+  "database": "memgraph",
+  "expected_node_count": 7115,
+  "expected_relationship_count": 103689,
+  "git_commit": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "indexes": {
+    "User.bucket": "verified",
+    "User.id": "verified"
+  },
+  "load_batch_size": 1000,
+  "load_metrics": {
+    "batch_size": 1000,
+    "database": "memgraph",
+    "errors": [],
+    "load_method": "parameterized UNWIND transactional driver batches; schema time excluded",
+    "node_load_seconds": 0.117023,
+    "nodes_loaded": 7115,
+    "nodes_per_second": 60800.013672525914,
+    "relationship_load_seconds": 1.8908353999999998,
+    "relationships_loaded": 103689,
+    "relationships_per_second": 54837.6659332695,
+    "success": true,
+    "total_load_seconds": 2.0078584
+  },
+  "load_success": true,
+  "metadata": {
+    "indexed_properties": "bucket,id",
+    "protocol_version": "5.2",
+    "resource_limits": "not observable",
+    "server_agent": "Neo4j/v5.11.0 compatible graph database server - Memgraph"
+  },
+  "resource_configuration": {
+    "container_status": "running",
+    "cpu_percent": 0.5,
+    "database": "memgraph",
+    "image": "memgraph/memgraph:3.12.0",
+    "memory_bytes": 268435456,
+    "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+    "observed_at": "2026-08-20T02:52:53.210826+05:30"
+  },
+  "schema_success": true,
+  "tested_workloads": [
+    "point_lookup",
+    "filtered_lookup",
+    "one_hop",
+    "two_hop",
+    "three_hop",
+    "aggregation"
+  ],
+  "timestamp": "2026-08-20T02:52:47.096870+05:30",
+  "tls_verification_success": null,
+  "validation_success": true
+}

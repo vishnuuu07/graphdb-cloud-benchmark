@@ -1,0 +1,6 @@
+{
+  "ingest\\ingest_results.json": true,
+  "raw\\read_raw.jsonl": true,
+  "summaries\\read_summary.json": true,
+  "summaries\\round_summary.json": true
+}

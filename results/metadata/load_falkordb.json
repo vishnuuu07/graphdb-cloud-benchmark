@@ -1,0 +1,14 @@
+{
+  "batch_size": 1000,
+  "database": "falkordb",
+  "errors": [],
+  "load_method": "parameterized FalkorDB Cypher transactional batches; schema time excluded",
+  "node_load_seconds": 0.0670676,
+  "nodes_loaded": 7115,
+  "nodes_per_second": 106086.99282514954,
+  "relationship_load_seconds": 5.8265598,
+  "relationships_loaded": 103689,
+  "relationships_per_second": 17795.92135997643,
+  "success": true,
+  "total_load_seconds": 5.8936274
+}

@@ -1,0 +1,21 @@
+services:
+  arangodb:
+    image: arangodb:3.12.9.4
+    container_name: graphbench-arangodb
+    restart: "no"
+    ports:
+      - "127.0.0.1:8529:8529"
+    environment:
+      ARANGO_ROOT_PASSWORD: ${ARANGODB_PASSWORD:?Set ARANGODB_PASSWORD in .env or the environment}
+    cpus: 0.5
+    mem_limit: 256m
+    volumes:
+      - arangodb-data:/var/lib/arangodb3
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8529/_api/version >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+
+volumes:
+  arangodb-data:

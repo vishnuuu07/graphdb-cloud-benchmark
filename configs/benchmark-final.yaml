@@ -1,0 +1,18 @@
+# Frozen source of truth for final measurements. Do not change after benchmark runs begin.
+profile: final
+seed: 20260319
+warmup_iterations: 30
+measured_iterations: 200
+benchmark_rounds: 3
+load_batch_size: 1000
+concurrency_levels: [1, 5, 10, 20, 40]
+mixed_read_ratio: 0.8
+mixed_write_ratio: 0.2
+mixed_warmup_seconds: 15
+mixed_measurement_seconds: 60
+target_cpu_cores: 0.5
+target_memory_bytes: 268435456
+target_storage_bytes: 1073741824
+expected_node_count: 7115
+expected_relationship_count: 103689
+benchmark_client_region: not configured

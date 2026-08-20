@@ -1,0 +1,104 @@
+{
+  "configuration_fingerprint": "1c097c16a1f5685da9b4b637574410eac5fe397741ba8c4267c114d39e13bb64",
+  "database": "arangodb",
+  "preflight": {
+    "configuration_fingerprint": "1c097c16a1f5685da9b4b637574410eac5fe397741ba8c4267c114d39e13bb64",
+    "connection": true,
+    "counts": {
+      "nodes": 7115,
+      "relationships": 103689
+    },
+    "database": "arangodb",
+    "indexes": "verified by adapter",
+    "profile": "final",
+    "validation": [
+      "point_lookup",
+      "filtered_lookup",
+      "one_hop",
+      "two_hop",
+      "three_hop",
+      "aggregation"
+    ]
+  },
+  "raw_samples": [
+    {
+      "database": "arangodb",
+      "duration_ms": 1.868,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "3930",
+      "iteration": 0,
+      "result_count": 1,
+      "round": 0,
+      "success": true,
+      "warmup": true,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "arangodb",
+      "duration_ms": 1.4955,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "7145",
+      "iteration": 1,
+      "result_count": 1,
+      "round": 0,
+      "success": true,
+      "warmup": true,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "arangodb",
+      "duration_ms": 1.4669,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "3930",
+      "iteration": 0,
+      "result_count": 1,
+      "round": 1,
+      "success": true,
+      "warmup": false,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "arangodb",
+      "duration_ms": 1.4844,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "7145",
+      "iteration": 1,
+      "result_count": 1,
+      "round": 1,
+      "success": true,
+      "warmup": false,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "arangodb",
+      "duration_ms": 1.8656,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "3600",
+      "iteration": 2,
+      "result_count": 1,
+      "round": 1,
+      "success": true,
+      "warmup": false,
+      "workload": "point_lookup"
+    }
+  ],
+  "run_type": "dry_run",
+  "summary": {
+    "attempt_count": 3,
+    "error_rate": 0.0,
+    "failure_count": 0,
+    "maximum_ms": 1.8656,
+    "mean_ms": 1.6056333333333335,
+    "minimum_ms": 1.4669,
+    "p50_ms": 1.4844,
+    "p95_ms": 1.82748,
+    "p99_ms": 1.8579759999999998,
+    "successful_count": 3
+  },
+  "timestamp": "2026-08-20T00:01:10.994598+05:30"
+}

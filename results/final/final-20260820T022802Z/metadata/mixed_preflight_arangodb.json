@@ -1,0 +1,33 @@
+{
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "connection": true,
+  "counts": {
+    "nodes": 7115,
+    "relationships": 103689
+  },
+  "database": "arangodb",
+  "indexes": "verified by adapter",
+  "profile": "final",
+  "resources": {
+    "expected_cpu_cores": 0.5,
+    "expected_memory_bytes": 268435456,
+    "observed": {
+      "container_status": "running",
+      "cpu_percent": 0.5,
+      "database": "arangodb",
+      "image": "arangodb:3.12.9.4",
+      "memory_bytes": 268435456,
+      "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+      "observed_at": "2026-08-20T04:10:34.620505+05:30"
+    },
+    "resource_parity_status": "strict compute parity"
+  },
+  "validation": [
+    "point_lookup",
+    "filtered_lookup",
+    "one_hop",
+    "two_hop",
+    "three_hop",
+    "aggregation"
+  ]
+}

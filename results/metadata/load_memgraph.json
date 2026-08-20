@@ -1,0 +1,14 @@
+{
+  "batch_size": 1000,
+  "database": "memgraph",
+  "errors": [],
+  "load_method": "parameterized UNWIND transactional driver batches; schema time excluded",
+  "node_load_seconds": 0.117023,
+  "nodes_loaded": 7115,
+  "nodes_per_second": 60800.013672525914,
+  "relationship_load_seconds": 1.8908353999999998,
+  "relationships_loaded": 103689,
+  "relationships_per_second": 54837.6659332695,
+  "success": true,
+  "total_load_seconds": 2.0078584
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "campaign_id": "final-20260820T022802Z",
+    "concurrency": 40,
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "database": "memgraph",
+    "error_message": "memgraph Cypher operation failed: {code: Memgraph.TransientError.MemgraphError.MemgraphError} {message: Cannot resolve conflicting transactions. Retry this transaction when the conflicting transaction is finished. For more details, visit https://memgraph.com/docs}",
+    "error_type": "AdapterError",
+    "workload": "mixed_write"
+  },
+  {
+    "campaign_id": "final-20260820T022802Z",
+    "concurrency": 40,
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "database": "memgraph",
+    "error_message": "memgraph Cypher operation failed: {code: Memgraph.TransientError.MemgraphError.MemgraphError} {message: Cannot resolve conflicting transactions. Retry this transaction when the conflicting transaction is finished. For more details, visit https://memgraph.com/docs}",
+    "error_type": "AdapterError",
+    "workload": "mixed_write"
+  },
+  {
+    "campaign_id": "final-20260820T022802Z",
+    "concurrency": 40,
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "database": "neo4j",
+    "error_message": "neo4j Cypher operation failed: {code: Neo.TransientError.General.MemoryPoolOutOfMemoryError} {message: The allocation of an extra 2.0 MiB would use more than the limit 67.2 MiB. Currently using 66.0 MiB. dbms.memory.transaction.total.max threshold reached}",
+    "error_type": "AdapterError",
+    "workload": "mixed_write"
+  }
+]

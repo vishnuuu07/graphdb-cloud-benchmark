@@ -1,0 +1,83 @@
+{
+  "benchmark_client_environment": "metadata/environment.json",
+  "campaign_id": "final-20260820T022802Z",
+  "campaign_status": "complete_with_measured_failures",
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "dataset_checksum": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc",
+  "fairness_manifest": "metadata/fairness_manifest.json",
+  "finished_at": "2026-08-20T03:15:30.561605+05:30",
+  "fixture_checksum": "2a61a07c52e55d11ef472bffb066b818f831ec216b515c901edb8484e190e1f5",
+  "git_commit_sha": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "ingest_stage": "complete",
+  "integrity_audit": "passed",
+  "integrity_audit_timestamp": "2026-08-20T06:53:55.122727+05:30",
+  "mixed_error_count": 3,
+  "mixed_platform_failures": [],
+  "mixed_result_completeness": {
+    "problems": [],
+    "result_sets": 25,
+    "valid": true
+  },
+  "mixed_results_directory": "raw/mixed_raw.jsonl",
+  "mixed_stage": "complete",
+  "mixed_stage_finished_at": "2026-08-20T04:25:21.524868+05:30",
+  "mixed_stage_started_at": "2026-08-20T04:18:19.223401+05:30",
+  "platform_failures": [],
+  "platforms": [
+    "cognodb",
+    "neo4j",
+    "memgraph",
+    "falkordb",
+    "arangodb"
+  ],
+  "post_workload_correctness": "metadata/mixed_post_correctness.json",
+  "profile": {
+    "benchmark_client_region": "not configured",
+    "benchmark_rounds": 3,
+    "concurrency_levels": [
+      1,
+      5,
+      10,
+      20,
+      40
+    ],
+    "expected_node_count": 7115,
+    "expected_relationship_count": 103689,
+    "load_batch_size": 1000,
+    "measured_iterations": 200,
+    "mixed_measurement_seconds": 60,
+    "mixed_read_ratio": 0.8,
+    "mixed_warmup_seconds": 15,
+    "mixed_write_ratio": 0.2,
+    "profile": "final",
+    "seed": 20260319,
+    "target_cpu_cores": 0.5,
+    "target_memory_bytes": 268435456,
+    "target_storage_bytes": 1073741824,
+    "warmup_iterations": 30
+  },
+  "prompt6_artifact_preservation": {
+    "ingest\\ingest_results.json": true,
+    "raw\\read_raw.jsonl": true,
+    "summaries\\read_summary.json": true,
+    "summaries\\round_summary.json": true
+  },
+  "read_stage": "complete",
+  "repair_attempt_failures": [
+    {
+      "database": "arangodb",
+      "error_type": "RuntimeError",
+      "message": "arangodb container did not become ready within 90s",
+      "timestamp": "2026-08-20T03:14:16.336345+05:30"
+    }
+  ],
+  "result_completeness": {
+    "problems": [],
+    "raw_rows": 18900,
+    "valid": true
+  },
+  "results_frozen": true,
+  "run_type": "final",
+  "started_at": "2026-08-20T03:14:50.606200+05:30",
+  "workload_manifest_hash": "b143786f3c591e5453a48dc3c698738c5452a26b0d6e67816826876f457f4a32"
+}

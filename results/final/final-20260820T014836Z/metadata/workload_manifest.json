@@ -1,0 +1,63 @@
+{
+  "canonical_graph": {
+    "direction": "outgoing",
+    "node": "User(id: integer, bucket: integer)",
+    "relationship": "(User)-[:VOTED_FOR]->(User)"
+  },
+  "workloads": {
+    "aggregation": {
+      "fixture_source": "none",
+      "index_dependency": "equivalent bucket schema index",
+      "logical_definition": "group all Users by bucket and count",
+      "result_semantic": "complete bucket-to-count map"
+    },
+    "filtered_lookup": {
+      "fixture_source": "data/fixtures/buckets.json",
+      "index_dependency": "User.bucket / users.bucket",
+      "logical_definition": "count User where bucket equals fixture bucket",
+      "result_semantic": "matching user count"
+    },
+    "mixed_read": {
+      "fixture_source": "data/fixtures/lookup_ids.json",
+      "index_dependency": "User.id / users.id",
+      "logical_definition": "canonical point lookup",
+      "result_semantic": "0 or 1 matching canonical user"
+    },
+    "mixed_write": {
+      "fixture_source": "data/fixtures/lookup_ids.json",
+      "index_dependency": "User.id / users.id",
+      "logical_definition": "increment only benchmark_counter for canonical id",
+      "result_semantic": "one affected user; topology/id/bucket unchanged"
+    },
+    "one_hop": {
+      "direction": "outgoing",
+      "fixture_source": "data/fixtures/start_nodes.json",
+      "hop_depth": 1,
+      "index_dependency": "User.id / users.id for start lookup",
+      "logical_definition": "count exact 1-edge outgoing VOTED_FOR paths",
+      "result_semantic": "relationship-distinct path multiplicity"
+    },
+    "point_lookup": {
+      "fixture_source": "data/fixtures/lookup_ids.json",
+      "index_dependency": "User.id / users.id",
+      "logical_definition": "count User where id equals fixture id",
+      "result_semantic": "0 or 1 matching canonical user"
+    },
+    "three_hop": {
+      "direction": "outgoing",
+      "fixture_source": "data/fixtures/start_nodes.json",
+      "hop_depth": 3,
+      "index_dependency": "User.id / users.id for start lookup",
+      "logical_definition": "count exact 3-edge outgoing VOTED_FOR paths",
+      "result_semantic": "relationship-distinct path multiplicity"
+    },
+    "two_hop": {
+      "direction": "outgoing",
+      "fixture_source": "data/fixtures/start_nodes.json",
+      "hop_depth": 2,
+      "index_dependency": "User.id / users.id for start lookup",
+      "logical_definition": "count exact 2-edge outgoing VOTED_FOR paths",
+      "result_semantic": "relationship-distinct path multiplicity"
+    }
+  }
+}

@@ -54,6 +54,24 @@ class LoadResult:
 
 
 @dataclass(frozen=True)
+class LoadMetrics:
+    """Measured, driver-based ingestion metrics for one complete graph load."""
+
+    database: str
+    nodes_loaded: int
+    relationships_loaded: int
+    node_load_seconds: float
+    relationship_load_seconds: float
+    nodes_per_second: float
+    relationships_per_second: float
+    total_load_seconds: float
+    batch_size: int
+    load_method: str
+    success: bool
+    errors: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
 class RawLatencySample:
     database: str
     workload: str
@@ -90,6 +108,8 @@ class ResourceObservation:
     observed_at: str
     cpu_percent: float | None = None
     memory_bytes: int | None = None
+    image: str | None = None
+    container_status: str | None = None
     notes: str | None = None
 
 

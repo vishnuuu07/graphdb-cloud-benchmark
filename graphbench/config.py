@@ -91,3 +91,47 @@ def load_platform_configs(path: Path | None = None) -> tuple[PlatformConfig, ...
     if len({platform.name for platform in platforms}) != len(platforms):
         raise ConfigurationError("Platform names must be unique")
     return platforms
+
+
+FINAL_PROFILE_KEYS = {
+    *REQUIRED_BENCHMARK_KEYS,
+    "profile",
+    "target_cpu_cores",
+    "target_memory_bytes",
+    "target_storage_bytes",
+    "expected_node_count",
+    "expected_relationship_count",
+    "benchmark_client_region",
+}
+
+
+def final_profile_path() -> Path:
+    return repository_root() / "configs" / "benchmark-final.yaml"
+
+
+def load_final_profile(path: Path | None = None) -> dict[str, Any]:
+    """Load frozen final settings without changing the default development profile."""
+    profile = _load_yaml(path or final_profile_path())
+    missing = FINAL_PROFILE_KEYS - profile.keys()
+    if missing:
+        raise ConfigurationError(f"Missing final profile settings: {', '.join(sorted(missing))}")
+    if profile["profile"] != "final":
+        raise ConfigurationError("Final profile must declare profile: final")
+    benchmark = load_benchmark_config(path or final_profile_path())
+    if benchmark.warmup_iterations != 30 or benchmark.measured_iterations != 200:
+        raise ConfigurationError(
+            "Final profile must use 30 warm-ups and 200 measured read iterations"
+        )
+    if benchmark.benchmark_rounds != 3:
+        raise ConfigurationError("Final profile must use exactly 3 benchmark rounds")
+    if benchmark.concurrency_levels != (1, 5, 10, 20, 40):
+        raise ConfigurationError("Final profile concurrency levels must be 1, 5, 10, 20, 40")
+    if benchmark.mixed_warmup_seconds != 15 or benchmark.mixed_measurement_seconds != 60:
+        raise ConfigurationError(
+            "Final profile mixed durations must be 15s warm-up and 60s measured"
+        )
+    if int(profile["target_memory_bytes"]) != 256 * 1024 * 1024:
+        raise ConfigurationError("Final profile target memory must be 256 MiB")
+    if float(profile["target_cpu_cores"]) != 0.5:
+        raise ConfigurationError("Final profile target CPU must be 0.5 cores")
+    return profile

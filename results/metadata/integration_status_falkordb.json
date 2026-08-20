@@ -1,0 +1,59 @@
+{
+  "actual_node_count": 7115,
+  "actual_relationship_count": 103689,
+  "configured_cpu_limit": 0.5,
+  "configured_memory_limit": 268435456,
+  "connection_success": true,
+  "container_image": "falkordb/falkordb:v4.20.1",
+  "container_status": "running",
+  "database": "falkordb",
+  "expected_node_count": 7115,
+  "expected_relationship_count": 103689,
+  "git_commit": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "indexes": {
+    "User.bucket": "verified",
+    "User.id": "verified"
+  },
+  "load_batch_size": 1000,
+  "load_metrics": {
+    "batch_size": 1000,
+    "database": "falkordb",
+    "errors": [],
+    "load_method": "parameterized FalkorDB Cypher transactional batches; schema time excluded",
+    "node_load_seconds": 0.0670676,
+    "nodes_loaded": 7115,
+    "nodes_per_second": 106086.99282514954,
+    "relationship_load_seconds": 5.8265598,
+    "relationships_loaded": 103689,
+    "relationships_per_second": 17795.92135997643,
+    "success": true,
+    "total_load_seconds": 5.8936274
+  },
+  "load_success": true,
+  "metadata": {
+    "indexed_properties": "bucket,id",
+    "resource_limits": "see Docker inspect evidence",
+    "server": "FalkorDB via supported Python client"
+  },
+  "resource_configuration": {
+    "container_status": "running",
+    "cpu_percent": 0.5,
+    "database": "falkordb",
+    "image": "falkordb/falkordb:v4.20.1",
+    "memory_bytes": 268435456,
+    "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+    "observed_at": "2026-08-20T04:37:00.439409+05:30"
+  },
+  "schema_success": true,
+  "tested_workloads": [
+    "point_lookup",
+    "filtered_lookup",
+    "one_hop",
+    "two_hop",
+    "three_hop",
+    "aggregation"
+  ],
+  "timestamp": "2026-08-20T04:36:49.602956+05:30",
+  "tls_verification_success": null,
+  "validation_success": true
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "database": "neo4j",
+    "error_type": "EnvironmentConfigurationError",
+    "message": "NEO4J settings missing: PASSWORD",
+    "timestamp": "2026-08-20T02:22:05.363502+05:30"
+  },
+  {
+    "database": "arangodb",
+    "error_type": "AdapterError",
+    "message": "arangodb connection failed: [HTTP 401][ERR 11] not authorized to execute this request",
+    "timestamp": "2026-08-20T02:23:18.752705+05:30"
+  }
+]

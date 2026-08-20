@@ -1,0 +1,19 @@
+services:
+  memgraph:
+    image: memgraph/memgraph:3.12.0
+    container_name: graphbench-memgraph
+    restart: "no"
+    ports:
+      - "127.0.0.1:7688:7687"
+    cpus: 0.5
+    mem_limit: 256m
+    volumes:
+      - memgraph-data:/var/lib/memgraph
+    healthcheck:
+      test: ["CMD-SHELL", "mgconsole --host 127.0.0.1 --port 7687 --execute 'RETURN 1;' >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  memgraph-data:

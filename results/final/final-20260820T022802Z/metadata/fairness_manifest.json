@@ -1,0 +1,148 @@
+{
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "dataset_hash": "7d3e53626e14b8b09fb3b396bece9d481ad606bd64ceab066349ff57d4ada7fc",
+  "fixture_hash": "2a61a07c52e55d11ef472bffb066b818f831ec216b515c901edb8484e190e1f5",
+  "generated_at": "2026-08-20T03:15:30.433666+05:30",
+  "platforms": {
+    "arangodb": {
+      "container_image": "arangodb:3.12.9.4",
+      "cpu": {
+        "advertised": null,
+        "configured": 0.5,
+        "observed": 0.5
+      },
+      "database": "arangodb",
+      "database_version": "3.12.9-4",
+      "deployment_type": "local controlled Docker",
+      "driver": "8.3.3",
+      "known_deviations": [],
+      "network_topology": "local loopback Docker",
+      "query_language": "AQL",
+      "ram": {
+        "advertised": null,
+        "configured": 268435456,
+        "observed": 268435456
+      },
+      "resource_parity_status": "strict compute parity",
+      "storage": {
+        "advertised": null,
+        "configured": "not available/reliable in current Docker Desktop setup",
+        "observed_footprint": 22249472
+      },
+      "transport": "HTTP"
+    },
+    "cognodb": {
+      "cpu": {
+        "advertised": "0.5 burstable vCPU",
+        "configured": "not observable",
+        "observed": "not observable"
+      },
+      "database": "cognodb",
+      "deployment_type": "managed cloud",
+      "known_deviations": [
+        "WAN/TLS transport differs from local loopback containers"
+      ],
+      "network_topology": "remote TLS/Bolt",
+      "observation_type": "advertised",
+      "ram": {
+        "advertised": "256 MiB",
+        "configured": "not observable",
+        "observed": "not observable"
+      },
+      "resource_parity_status": "advertised compute target; remote managed service",
+      "resource_source": "Wexa assignment specification",
+      "storage": {
+        "advertised": "1 GiB",
+        "configured": "not observable",
+        "observed_footprint": "not observable"
+      }
+    },
+    "falkordb": {
+      "container_image": "falkordb/falkordb:v4.20.1",
+      "cpu": {
+        "advertised": null,
+        "configured": 0.5,
+        "observed": 0.5
+      },
+      "database": "falkordb",
+      "database_version": "not observable",
+      "deployment_type": "local controlled Docker",
+      "driver": "1.7.1",
+      "known_deviations": [
+        "FalkorDB RDB restore requires the normal prepare schema rebuild before indexed validation."
+      ],
+      "network_topology": "local loopback Docker",
+      "query_language": "Cypher",
+      "ram": {
+        "advertised": null,
+        "configured": 268435456,
+        "observed": 268435456
+      },
+      "resource_parity_status": "strict compute parity",
+      "storage": {
+        "advertised": null,
+        "configured": "not available/reliable in current Docker Desktop setup",
+        "observed_footprint": 1699840
+      },
+      "transport": "Redis protocol"
+    },
+    "memgraph": {
+      "container_image": "memgraph/memgraph:3.12.0",
+      "cpu": {
+        "advertised": null,
+        "configured": 0.5,
+        "observed": 0.5
+      },
+      "database": "memgraph",
+      "database_version": "Neo4j/v5.11.0 compatible graph database server - Memgraph",
+      "deployment_type": "local controlled Docker",
+      "driver": "5.28.1",
+      "known_deviations": [],
+      "network_topology": "local loopback Docker",
+      "query_language": "Cypher",
+      "ram": {
+        "advertised": null,
+        "configured": 268435456,
+        "observed": 268435456
+      },
+      "resource_parity_status": "strict compute parity",
+      "storage": {
+        "advertised": null,
+        "configured": "not available/reliable in current Docker Desktop setup",
+        "observed_footprint": 65601536
+      },
+      "transport": "Bolt"
+    },
+    "neo4j": {
+      "container_image": "neo4j:5.26.5-community",
+      "cpu": {
+        "advertised": null,
+        "configured": 0.5,
+        "observed": 0.5
+      },
+      "database": "neo4j",
+      "database_version": "Neo4j/5.26.5",
+      "deployment_type": "local controlled Docker",
+      "driver": "5.28.1",
+      "known_deviations": [
+        "observed Docker limit differs from final profile"
+      ],
+      "network_topology": "local loopback Docker",
+      "query_language": "Cypher",
+      "ram": {
+        "advertised": null,
+        "configured": 268435456,
+        "observed": 402653184
+      },
+      "resource_parity_status": "resource parity deviation",
+      "storage": {
+        "advertised": null,
+        "configured": "not available/reliable in current Docker Desktop setup",
+        "observed_footprint": 545976320
+      },
+      "transport": "Bolt"
+    }
+  },
+  "storage_quota_note": "Docker Desktop volume quota is not reliably enforceable here; observed footprint is not a storage limit.",
+  "workload_manifest_hash": "b143786f3c591e5453a48dc3c698738c5452a26b0d6e67816826876f457f4a32"
+}

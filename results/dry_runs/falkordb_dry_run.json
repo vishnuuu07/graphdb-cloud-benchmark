@@ -1,0 +1,104 @@
+{
+  "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+  "database": "falkordb",
+  "preflight": {
+    "configuration_fingerprint": "bf5c21d0bce4043d0c453d41497d7c375e685b28ee254714521e4a9c2879b162",
+    "connection": true,
+    "counts": {
+      "nodes": 7115,
+      "relationships": 103689
+    },
+    "database": "falkordb",
+    "indexes": "verified by adapter",
+    "profile": "final",
+    "validation": [
+      "point_lookup",
+      "filtered_lookup",
+      "one_hop",
+      "two_hop",
+      "three_hop",
+      "aggregation"
+    ]
+  },
+  "raw_samples": [
+    {
+      "database": "falkordb",
+      "duration_ms": 0.7258,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "3930",
+      "iteration": 0,
+      "result_count": 1,
+      "round": 0,
+      "success": true,
+      "warmup": true,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "falkordb",
+      "duration_ms": 1.0523,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "7145",
+      "iteration": 1,
+      "result_count": 1,
+      "round": 0,
+      "success": true,
+      "warmup": true,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "falkordb",
+      "duration_ms": 0.7275,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "3930",
+      "iteration": 0,
+      "result_count": 1,
+      "round": 1,
+      "success": true,
+      "warmup": false,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "falkordb",
+      "duration_ms": 0.7624,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "7145",
+      "iteration": 1,
+      "result_count": 1,
+      "round": 1,
+      "success": true,
+      "warmup": false,
+      "workload": "point_lookup"
+    },
+    {
+      "database": "falkordb",
+      "duration_ms": 0.7296,
+      "error_message": null,
+      "error_type": null,
+      "fixture_id": "3600",
+      "iteration": 2,
+      "result_count": 1,
+      "round": 1,
+      "success": true,
+      "warmup": false,
+      "workload": "point_lookup"
+    }
+  ],
+  "run_type": "dry_run",
+  "summary": {
+    "attempt_count": 3,
+    "error_rate": 0.0,
+    "failure_count": 0,
+    "maximum_ms": 0.7624,
+    "mean_ms": 0.7398333333333333,
+    "minimum_ms": 0.7275,
+    "p50_ms": 0.7296,
+    "p95_ms": 0.75912,
+    "p99_ms": 0.761744,
+    "successful_count": 3
+  },
+  "timestamp": "2026-08-20T00:23:50.267745+05:30"
+}

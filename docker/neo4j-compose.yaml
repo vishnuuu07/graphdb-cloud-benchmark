@@ -1,0 +1,26 @@
+services:
+  neo4j:
+    image: neo4j:5.26.5-community
+    container_name: graphbench-neo4j
+    restart: "no"
+    ports:
+      - "127.0.0.1:7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:?Set NEO4J_PASSWORD in .env or the environment}
+      # Neo4j 5.26 documented server memory settings for the verified 384 MiB profile.
+      NEO4J_server_memory_heap_initial__size: 64m
+      NEO4J_server_memory_heap_max__size: 96m
+      NEO4J_server_memory_pagecache_size: 32m
+    cpus: 0.5
+    # Neo4j's verified stable allocation; the frozen benchmark target remains 256 MiB.
+    mem_limit: ${NEO4J_MEMORY_LIMIT:-384m}
+    volumes:
+      - neo4j-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://localhost:7474 >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+
+volumes:
+  neo4j-data:

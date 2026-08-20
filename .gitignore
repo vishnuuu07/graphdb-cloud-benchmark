@@ -17,3 +17,5 @@ __pycache__/
 *.tmp
 *.log
 data/raw/
+# Retained locally only: high-volume per-operation mixed-workload telemetry.
+results/final/**/raw/mixed_raw.jsonl

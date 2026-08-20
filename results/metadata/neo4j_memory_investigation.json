@@ -1,0 +1,103 @@
+{
+  "database": "neo4j",
+  "image": "neo4j:5.26.5-community",
+  "run_type": "resource_validation",
+  "canonical_expected_counts": {"nodes": 7115, "relationships": 103689},
+  "stable_profile": {
+    "cpu_limit_cores": 0.5,
+    "memory_limit_bytes": 402653184,
+    "heap_initial": "64m",
+    "heap_max": "96m",
+    "page_cache": "32m",
+    "node_batch_size": 1000,
+    "relationship_batch_size": 1000
+  },
+  "attempts": [
+    {
+      "source": "previous verified evidence",
+      "docker_memory_limit_bytes": 268435456,
+      "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "32m",
+      "node_batch_size": 1000, "relationship_batch_size": 1000,
+      "startup_result": "passed", "node_load_result": "passed",
+      "relationship_load_result": "failed", "loaded_relationship_count": "not observed",
+      "oom_killed": true, "exit_code": 137, "validation_result": "not reached",
+      "failure_category": "oom_during_relationship_load"
+    },
+    {
+      "source": "previous verified evidence",
+      "docker_memory_limit_bytes": 335544320,
+      "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "32m",
+      "node_batch_size": 1000, "relationship_batch_size": 1000,
+      "startup_result": "passed", "node_load_result": "passed",
+      "relationship_load_result": "failed", "loaded_relationship_count": "not observed",
+      "oom_killed": true, "exit_code": 137, "validation_result": "not reached",
+      "failure_category": "oom_during_relationship_load"
+    },
+    {
+      "timestamp": "2026-08-20", "docker_memory_limit_bytes": 268435456, "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "32m",
+      "node_batch_size": 1000, "relationship_batch_size": 500,
+      "startup_result": "passed", "node_load_result": "failed before commit (0 loaded of 7115)",
+      "relationship_load_result": "not reached", "loaded_relationship_count": 0,
+      "oom_killed": true, "exit_code": 137, "validation_result": "not reached",
+      "failure_category": "oom_during_node_load; schema precondition was not established"
+    },
+    {
+      "timestamp": "2026-08-20", "docker_memory_limit_bytes": 268435456, "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "32m",
+      "transaction_max": "16m", "transaction_total_max": "24m", "query_cache_entries": 100,
+      "node_batch_size": 500, "relationship_batch_size": 250,
+      "startup_result": "passed", "node_load_result": "failed (2000 loaded of 7115)",
+      "relationship_load_result": "not reached", "loaded_relationship_count": 0,
+      "oom_killed": true, "exit_code": 137, "validation_result": "not reached",
+      "failure_category": "oom_during_node_load"
+    },
+    {
+      "timestamp": "2026-08-20", "docker_memory_limit_bytes": 268435456, "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "32m",
+      "transaction_max": "16m", "transaction_total_max": "24m", "query_cache_entries": 100,
+      "node_batch_size": 250, "relationship_batch_size": 250,
+      "startup_result": "passed", "node_load_result": "failed (1000 loaded of 7115; timeout)",
+      "relationship_load_result": "not reached", "loaded_relationship_count": 0,
+      "oom_killed": false, "exit_code": 0, "validation_result": "not reached",
+      "failure_category": "memory_pressure_timeout; 253.8 MiB of 256 MiB observed"
+    },
+    {
+      "timestamp": "2026-08-20", "docker_memory_limit_bytes": 268435456, "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "32m",
+      "transaction_max": "16m", "transaction_total_max": "24m", "query_cache_entries": 100,
+      "node_batch_size": 100, "relationship_batch_size": 100,
+      "startup_result": "passed", "node_load_result": "failed (2200 loaded of 7115; timeout)",
+      "relationship_load_result": "not reached", "loaded_relationship_count": 0,
+      "oom_killed": false, "exit_code": 0, "validation_result": "not reached",
+      "failure_category": "memory_pressure_timeout; 251.7 MiB of 256 MiB observed"
+    },
+    {
+      "timestamp": "2026-08-20", "docker_memory_limit_bytes": 268435456, "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "32m",
+      "transaction_max": "16m", "transaction_total_max": "24m", "query_cache_entries": 100,
+      "node_batch_size": 50, "relationship_batch_size": 50,
+      "startup_result": "passed", "node_load_result": "failed (3500 loaded of 7115; timeout)",
+      "relationship_load_result": "not reached", "loaded_relationship_count": 0,
+      "oom_killed": false, "exit_code": 0, "validation_result": "not reached",
+      "failure_category": "memory_pressure_timeout; 252.9 MiB of 256 MiB observed"
+    },
+    {
+      "timestamp": "2026-08-20", "docker_memory_limit_bytes": 268435456, "cpu_limit_cores": 0.5,
+      "heap_initial": "64m", "heap_max": "96m", "page_cache": "16m",
+      "transaction_max": "16m", "transaction_total_max": "24m", "query_cache_entries": 100,
+      "node_batch_size": 50, "relationship_batch_size": 50,
+      "startup_result": "passed", "node_load_result": "failed (2550 loaded of 7115; timeout)",
+      "relationship_load_result": "not reached", "loaded_relationship_count": 0,
+      "oom_killed": false, "exit_code": 0, "validation_result": "not reached",
+      "failure_category": "memory_pressure_timeout"
+    }
+  ],
+  "lowest_verified_stable_memory_bytes": 402653184,
+  "resource_parity_status": "deviation",
+  "target_memory_bytes": 268435456,
+  "configured_memory_bytes": 402653184,
+  "reason": "Neo4j starts at 256 MiB but could not reliably complete canonical dataset ingestion under that limit despite progressively smaller transaction batches and supported low-memory tuning. The lowest verified stable allocation was 384 MiB."
+}

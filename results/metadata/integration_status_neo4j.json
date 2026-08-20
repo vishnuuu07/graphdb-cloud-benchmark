@@ -1,0 +1,60 @@
+{
+  "actual_node_count": 7115,
+  "actual_relationship_count": 103689,
+  "configured_cpu_limit": 0.5,
+  "configured_memory_limit": 402653184,
+  "connection_success": true,
+  "container_image": "neo4j:5.26.5-community",
+  "container_status": "running",
+  "database": "neo4j",
+  "expected_node_count": 7115,
+  "expected_relationship_count": 103689,
+  "git_commit": "81825faee24beca69ca1ada2135147a4df2de64d",
+  "indexes": {
+    "User.bucket": "verified",
+    "User.id": "verified"
+  },
+  "load_batch_size": 1000,
+  "load_metrics": {
+    "batch_size": 1000,
+    "database": "neo4j",
+    "errors": [],
+    "load_method": "parameterized UNWIND transactional driver batches; schema time excluded",
+    "node_load_seconds": 25.383915400000003,
+    "nodes_loaded": 7115,
+    "nodes_per_second": 280.2956079817379,
+    "relationship_load_seconds": 40.697006,
+    "relationships_loaded": 103689,
+    "relationships_per_second": 2547.82870268147,
+    "success": true,
+    "total_load_seconds": 66.08092140000001
+  },
+  "load_success": true,
+  "metadata": {
+    "indexed_properties": "bucket,id",
+    "protocol_version": "5.8",
+    "resource_limits": "not observable",
+    "server_agent": "Neo4j/5.26.5"
+  },
+  "resource_configuration": {
+    "container_status": "running",
+    "cpu_percent": 0.5,
+    "database": "neo4j",
+    "image": "neo4j:5.26.5-community",
+    "memory_bytes": 402653184,
+    "notes": "Docker configured limits; CPU value is cores, not a utilization percentage.",
+    "observed_at": "2026-08-20T03:09:23.327202+05:30"
+  },
+  "schema_success": true,
+  "tested_workloads": [
+    "point_lookup",
+    "filtered_lookup",
+    "one_hop",
+    "two_hop",
+    "three_hop",
+    "aggregation"
+  ],
+  "timestamp": "2026-08-20T03:07:45.693935+05:30",
+  "tls_verification_success": null,
+  "validation_success": true
+}

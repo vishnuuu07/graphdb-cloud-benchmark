@@ -1,0 +1,38 @@
+[
+  {
+    "database": "neo4j",
+    "error_type": "AdapterError",
+    "message": "neo4j connection failed: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):\nFailed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\nConnection to 127.0.0.1:7687 closed with incomplete handshake response",
+    "timestamp": "2026-08-20T02:52:46.119340+05:30"
+  },
+  {
+    "database": "arangodb",
+    "error_type": "AdapterError",
+    "message": "arangodb connection failed: [HTTP 401][ERR 11] not authorized to execute this request",
+    "timestamp": "2026-08-20T02:54:00.444340+05:30"
+  },
+  {
+    "database": "neo4j",
+    "error_type": "AdapterError",
+    "message": "neo4j Cypher operation failed: {code: Neo.TransientError.General.MemoryPoolOutOfMemoryError} {message: The allocation of an extra 2.0 MiB would use more than the limit 67.2 MiB. Currently using 67.0 MiB. dbms.memory.transaction.total.max threshold reached}",
+    "timestamp": "2026-08-20T03:03:27.966469+05:30"
+  },
+  {
+    "database": "arangodb",
+    "error_type": "RuntimeError",
+    "message": "arangodb container did not become ready within 90s",
+    "timestamp": "2026-08-20T03:05:01.625137+05:30"
+  },
+  {
+    "database": "arangodb",
+    "error_type": "RuntimeError",
+    "message": "arangodb container did not become ready within 90s",
+    "timestamp": "2026-08-20T03:12:03.829448+05:30"
+  },
+  {
+    "database": "arangodb",
+    "error_type": "RuntimeError",
+    "message": "arangodb container did not become ready within 90s",
+    "timestamp": "2026-08-20T03:14:16.336345+05:30"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "problems": [
+    "arangodb/aggregation: expected 200 attempts in each round",
+    "arangodb/filtered_lookup: expected 200 attempts in each round",
+    "arangodb/one_hop: expected 200 attempts in each round",
+    "arangodb/point_lookup: expected 200 attempts in each round",
+    "arangodb/three_hop: expected 200 attempts in each round",
+    "arangodb/two_hop: expected 200 attempts in each round",
+    "neo4j/aggregation: expected 200 attempts in each round",
+    "neo4j/filtered_lookup: expected 200 attempts in each round",
+    "neo4j/one_hop: expected 200 attempts in each round",
+    "neo4j/point_lookup: expected 200 attempts in each round",
+    "neo4j/three_hop: expected 200 attempts in each round",
+    "neo4j/two_hop: expected 200 attempts in each round"
+  ],
+  "raw_rows": 11340,
+  "valid": false
+}
