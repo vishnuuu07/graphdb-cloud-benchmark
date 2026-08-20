@@ -271,18 +271,21 @@ hand-edited performance narrative:
   fingerprint, profile, completeness, and freeze status;
 - [raw read measurements](results/final/final-20260820T022802Z/raw/read_raw.jsonl), plus
   [mixed summaries](results/final/final-20260820T022802Z/summaries/mixed_summary.json) and the
-  [mixed failure index](results/final/final-20260820T022802Z/mixed_errors.json). The high-volume
-  per-operation mixed JSONL is intentionally retained locally and excluded from the repository;
-  the published mixed summaries and recorded failures remain available;
+  [mixed failure index](results/final/final-20260820T022802Z/mixed_errors.json). The complete
+  per-operation mixed JSONL is available as a losslessly compressed
+  [GitHub Release asset](https://github.com/vishnuuu07/graphdb-cloud-benchmark/releases/download/raw-evidence-final-20260820T022802Z/final-20260820T022802Z-mixed_raw.tar.gz).
+  Verify the archive with SHA-256 `708758117047431297c8bbe20e0959125308efb1d4e360626b5406ee1d520486`;
+  after extraction, verify `mixed_raw.jsonl` with SHA-256
+  `5921e9b6efe8d3bbb751f918857421b3c011c6d620658885a1abb8f178bfe612`;
 - [summaries](results/final/final-20260820T022802Z/summaries/) — generated p50/p95/QPS tables;
 - [integrity audit](results/final/final-20260820T022802Z/audit/integrity_audit.md) and
   [audit evidence](results/final/final-20260820T022802Z/audit/integrity_audit.json);
 - [resource observations](results/final/final-20260820T022802Z/metadata/resource_observations.json)
   and [fairness manifest](results/final/final-20260820T022802Z/metadata/fairness_manifest.json).
 
-The audit independently reconciled the locally retained raw rows to summaries, retained measured
-failures, checked query equivalence against the Python oracle, and passed with results frozen.
-The configuration fingerprint links the final inputs and published artifacts.
+The audit independently reconciled raw rows to summaries, retained measured failures, checked
+query equivalence against the Python oracle, and passed with results frozen. The configuration
+fingerprint links the final inputs and published artifacts.
 
 ## Repository structure
 

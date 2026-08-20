@@ -24,8 +24,8 @@ Evidence refers to the frozen campaign `final-20260820T022802Z` and its passed i
 - [x] read/write ratio documented — PASS
 - [x] measured failures retained — PASS
 - [x] footprint/resource observations — PASS WITH CAVEAT
-- [ ] complete raw data committed — PARTIAL: read raw measurements are committed; the high-volume
-      mixed-operation JSONL is retained locally and intentionally excluded from the repository
+- [x] complete raw data published — PASS WITH CAVEAT: read raw measurements are committed; the
+      high-volume mixed-operation JSONL is losslessly published as a GitHub Release asset
 - [x] results audit — PASS
 - [x] README results matrix — PASS
 - [x] charts — PASS
@@ -56,7 +56,7 @@ Evidence refers to the frozen campaign `final-20260820T022802Z` and its passed i
 | Read/write ratio documented | PASS | README; final profile |
 | Measured failures retained | PASS | README; `mixed_errors.json`; raw mixed rows |
 | Footprint/resource observations | PASS WITH CAVEAT | fairness manifest; runtime cloud resources and local quotas are not observable/enforceable |
-| Raw data committed | PARTIAL | Frozen read JSONL is included; high-volume mixed-operation raw JSONL is retained locally and excluded from Git |
+| Raw data published | PASS WITH CAVEAT | Frozen read JSONL is included; complete mixed-operation raw JSONL is a losslessly compressed GitHub Release asset with published checksums |
 | Results audit | PASS | `audit/integrity_audit.md` |
 | README results matrix | PASS | README |
 | Charts | PASS | Five PNG files in `charts/` |
